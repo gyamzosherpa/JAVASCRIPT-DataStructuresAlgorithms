@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete element</title>
+    <script>
+      let data = [30, 20, 45, 76, 20, 80];
+      let position = 3;
+      for (let i = position; i < data.length - 1; i++) {
+        //console.log(data[i]);
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1;
+      console.warn(data);
+    </script>
+  </head>
+  <body>
+    <input class="positionEl" type="text" placeholder="enter position" />
+    <button class="remove" type="submit">Remove Element</button>
+    <script>
+      let button = document.querySelector('.remove');
+      button.addEventListener('click', () => {
+        let data = [30, 20, 45, 76, 20, 80];
+        let positionEl = parseInt(document.querySelector('.positionEl').value);
+        for (let i = positionEl; i < data.length - 1; i++) {
+          //console.log(data[i]);
+          data[i] = data[i + 1];
+        }
+        data.length = data.length - 1;
+        document.write(data);
+      });
+    </script>
+  </body>
+</html>

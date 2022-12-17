@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array traversing</title>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">GET Element</button>
+    <script>
+      let data = [5, 2, 45, 30, 20, 43, 22, 1, 49, 0];
+      // print or traverse each element
+      //   for (let key of data) {
+      //  console.log(key);
+      //  }
+
+      for (let i = 0; i < data.length; i++) {
+        console.log(`Array ${i} is ${data[i]}`);
+      }
+
+      //accessing
+      let x = 3;
+      console.log(data[x]); //"30", array starts from "0"
+
+      function getElement() {
+        let el = parseInt(document.querySelector('#element').value);
+        if (el < data.length && typeof el === 'number' && el >= 0) {
+          alert(data[el]);
+          document.write(data[el]);
+        } else {
+          alert('please enter valid number');
+        }
+      }
+    </script>
+  </body>
+</html>
